@@ -70,6 +70,7 @@ public class CharacterController2D : MonoBehaviour
 			if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
 			{
 				crouch = true;
+				Debug.Log("Can nor stand!: " + crouch);
 			}
 		}
 
@@ -83,8 +84,8 @@ public class CharacterController2D : MonoBehaviour
 				if (!m_wasCrouching)
 				{
 					m_wasCrouching = true;
-					OnCrouchEvent.Invoke(true);
 				}
+				OnCrouchEvent.Invoke(true);
 
 				// Reduce the speed by the crouchSpeed multiplier
 				move *= m_CrouchSpeed;
