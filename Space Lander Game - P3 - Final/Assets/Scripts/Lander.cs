@@ -104,7 +104,7 @@ public class Lander : MonoBehaviour
         shouldPlayThrustSfx = false;
         
         if (!allowThrust || fuel <= 0)
-        {
+        {s
             mainThrusterAnim.SetBool("ApplyingThrust", false);
             leftThrusterAnim.SetBool("ApplyingThrust", false);
             rightThrusterAnim.SetBool("ApplyingThrust", false);
